@@ -1,0 +1,21 @@
+<html>
+<head>
+  <script src="bower_components/processing/processing.js"></script>
+  <script src="bower_components/underscore/underscore-min.js"></script>
+
+</head>
+<body>
+<canvas id="canvas1" style="width:1000px;"></canvas>
+<canvas id="canvas2" style="width:1000px;"></canvas>
+<canvas id="canvas3"></canvas>
+<canvas id="canvas4"></canvas>
+<script src="cloth.js"></script>
+<script>
+var builder = new ParticleSystemBuilder();
+builder.setGravity(10).setK(10).setFriction(0.04).setAttached({top:false,left:true,right:true});
+
+new Processing(document.getElementById("canvas1"), builder.create());
+</script>
+</body>
+
+</html>
